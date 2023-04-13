@@ -1,0 +1,14 @@
+import nltk
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+# initialize the sentiment analyzer
+sid = SentimentIntensityAnalyzer()
+
+# ask user for input sentence
+sentence = input("Enter a sentence: ")
+
+# perform sentiment analysis
+scores = sid.polarity_scores(sentence)
+
+# print the sentiment scores
+print(scores)
